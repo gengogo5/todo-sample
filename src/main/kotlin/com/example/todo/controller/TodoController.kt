@@ -12,14 +12,10 @@ import java.util.*
 class TodoController(private val repository : TodoRepository) {
 
     @GetMapping
-    fun index() : ResponseEntity<List<Todo>> {
-        return ResponseEntity.ok(repository.findAll())
-    }
+    fun index() = ResponseEntity.ok(repository.findAll())
 
     @PostMapping
-    fun create(@RequestBody todo: Todo) : ResponseEntity<Todo> {
-        return ResponseEntity.ok(repository.save(todo))
-    }
+    fun create(@RequestBody todo: Todo) = ResponseEntity.ok(repository.save(todo))
 
     @PutMapping("{id}")
     fun done(@PathVariable(value = "id") id: Int) : ResponseEntity<String> {
