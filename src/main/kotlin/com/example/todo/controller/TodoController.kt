@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*
 import java.util.*
 
 @RestController
+@CrossOrigin("http://localhost:8081")
 @RequestMapping("/todos")
 // 本当はServiceからRepositoryを使う方が良いけど面倒なのでここから
 class TodoController(private val repository : TodoRepository) {
