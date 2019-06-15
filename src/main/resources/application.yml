@@ -4,6 +4,7 @@ spring:
     url: jdbc:h2:./h2db/sandbox
     username: dev
     password: dev
+    initialization-mode: embedded
   h2:
     console:
       enabled: true
