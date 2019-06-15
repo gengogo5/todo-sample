@@ -9,7 +9,6 @@
     </p>
     <input type="text" v-model="msg">
     <b-button @click="hello()">hello</b-button>
-    <b-button @click="getTodos()">Todo表示</b-button>
     <b-table striped hover :items="todos" :fields="fields"></b-table>
   </div>
 </template>
@@ -41,6 +40,9 @@ export default {
 
       todos: []
     }
+  },
+  created () {
+    this.getTodos()
   },
   methods: {
     hello () {
