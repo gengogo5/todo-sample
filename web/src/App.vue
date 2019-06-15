@@ -8,7 +8,7 @@
       no text
     </p>
     <input type="text" v-model="msg">
-    <button @click="hello()">hello</button>
+    <b-button @click="hello()">hello</b-button>
   </div>
 </template>
 
